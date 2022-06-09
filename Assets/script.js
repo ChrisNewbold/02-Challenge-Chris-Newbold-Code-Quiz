@@ -87,7 +87,9 @@ function answerSubmitted(event) {
     finishGame()
   } else {
     questionNumber++
-    setNextQuestion(questionNumber)
+    setNextQuestion(questionNumber);
+    localStorage.setItem("inicials");
+    localStorage.getItem("inicials");
   }
 }
 //this is called when the user "clicks" save on the result card
@@ -96,5 +98,5 @@ resultsCard.addEventListener("submit", function (e) {
   //this hides the result card and reveals the end card
   resultsCard.classList.add('hide')
   endCard.classList.remove('hide')
-  endCard.textContent = startCard
+  location.reload();
 });
