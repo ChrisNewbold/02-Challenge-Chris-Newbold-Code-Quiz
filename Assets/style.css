@@ -135,12 +135,13 @@ p {
   cursor: pointer;
   transform: scale(1.1);
 }
-
+/* timer class adjusting the font size  */
 .timer {
   font-size: 60px;
   margin: 0;
   padding: 0;
 }
+/* final score font size and margin/padding settings */
 .final-score {
   font-size: 35px;
   margin: 0;
