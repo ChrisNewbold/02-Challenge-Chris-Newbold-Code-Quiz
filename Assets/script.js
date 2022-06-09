@@ -20,8 +20,6 @@ answer3Button.addEventListener("click", answerSubmitted);
 answer4Button.addEventListener("click", answerSubmitted);
 startButton.addEventListener("click", startGame);
 
-// var correctAnswers = 0; 
-
 // this variable holds the amount of time remaining
 var countDownTimer = 75;
 // this holds a reference to the interval allowing us to start and stop the timer
@@ -82,8 +80,7 @@ function answerSubmitted(event) {
   // this determins if the user chose the wrong answer
   if (currentQuestion.answer != answer) {
     wrongAnswer()
-    // } else {
-    //   correctAnswers++
+
   }
   //if user is on the last question this will end the game or go to the next question
   if (questionNumber === questions.length - 1) {
@@ -99,4 +96,5 @@ resultsCard.addEventListener("submit", function (e) {
   //this hides the result card and reveals the end card
   resultsCard.classList.add('hide')
   endCard.classList.remove('hide')
+  endCard.textContent = startCard
 });
