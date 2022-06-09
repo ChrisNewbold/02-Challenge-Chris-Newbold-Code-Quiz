@@ -21,7 +21,7 @@ answer4Button.addEventListener("click", answerSubmitted);
 startButton.addEventListener("click", startGame);
 
 // this variable holds the amount of time remaining
-var countDownTimer = 75;
+var countDownTimer = 50;
 // this holds a reference to the interval allowing us to start and stop the timer
 let interval;
 // this variable holds the current question the player is up to 
@@ -93,10 +93,30 @@ function answerSubmitted(event) {
 resultsCard.addEventListener("submit", function (e) {
     e.preventDefault()
     //this hides the result card and reveals the end card
-    resultsCard.classList.add('hide')
-    endCard.classList.remove('hide')
+    resultsCard.classList.add('hide');
+    endCard.classList.remove('hide');
     const initials = e.target.querySelector("input").value;
-    const result = e.target.querySelector("#result").textContent
-    localStorage.setItem(initials, result)
+    const result = e.target.querySelector("#result").textContent;
+    localStorage.setItem(initials, result);
     console.log(result);
+
+    const endResult = document.getElementById("result");
+    const inicials = document.getElementById('input');
+    endResult.onclick = function () {
+        const key = inpKey.value;
+        const value = inpValue.value;
+
+        if (key && value) {
+            localStorage.setItem(key, value);
+            location.reload();
+        }
+    };
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+
+        isOutput.innerHTML += '${key}: ${value}<br />';
+    }
+
+
 });

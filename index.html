@@ -6,13 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- site title with a brief description of what the site is about -->
     <title>Code Quiz created by Chris Newbold</title>
-    <!-- document fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    /> -->
     <!-- document links -->
     <link rel="stylesheet" href="./Assets/style.css" />
   </head>
@@ -31,7 +24,7 @@
       </section>
       <section class="q-card hide">
         <!-- add the timer from JavaScript -->
-        <div class="timer">75</div>
+        <div class="timer">50</div>
         <div class="que-text">
           <!-- Here I've inserted question from JavaScript -->
         </div>
@@ -44,7 +37,7 @@
         </div>
       </section>
       <form class="results-card hide">
-        <h2>Congratulations you have completed the Quiz!</h2>
+        <p>Congratulations you have completed the Quiz!</p>
         <p class="final-score">your score is <span id="result"></span></p>
         <p>Please enter your inicials and Save your score!</p>
         <div class="row">
@@ -58,6 +51,8 @@
       </form>
       <section class="end-card hide">
         <h2>Want to try again?</h2>
+        <div class="result"></div>
+        <div class="inicials"></div>
         <button class="replay-btn">Replay Quiz</button>
       </section>
     </main>
