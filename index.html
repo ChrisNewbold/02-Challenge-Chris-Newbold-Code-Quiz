@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- site title with a brief description of what the site is about -->
+    <title>Code Quiz created by Chris Newbold</title>
+    <!-- document fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- document links -->
+    <link rel="stylesheet" href="./Assets/style.css" />
+  </head>
+
+  <!-- Quiz -->
+  <body>
+    <main>
+      <section class="start-card">
+          <h1>Coding Quiz Challenge <br />Rule Set</h1>
+          <p>
+            Try to answer the following code-related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your score
+            time by ten seconds!
+          </p>
+          <button class="start-btn">Start Quiz</button>
+      </section>
+      <section class="q-card hide">
+        <!-- <div class="question-count">Question 1 of 4 </div>-->
+        <!-- add the timer from JavaScript -->
+        <div class="timer">75</div>
+        <div id="questions" value="answer0"></div>
+        <div class="que-text">
+          <!-- Here I've inserted question from JavaScript -->
+        </div>
+        <div class="option-list">
+          <!-- Here I've inserted options from JavaScript -->
+          <button id="answer1" value="0"></button>
+          <button id="answer2" value="1"></button>
+          <button id="answer3" value="2"></button>
+          <button id="answer4" value="3"></button>
+        </div>
+      </section>
+      <form class="results-card hide">
+        <h2>Congratulations you have completed the Quiz!</h2>
+        <p class="final-score">your score is <span id="result"></span></p>
+        <p>Please enter your inicials and submit your score!</p>
+        <div class="row">
+          <div class="col">
+            <br />
+            <input type="text" class="form-control" placeholder="inicials">
+          </div>
+        </div>
+        <button class="sub-btn">Save</button>
+      </div>
+      </form>
+      <section class="end-card hide">
+        <h2>Want to try again?</h2>
+        <button class="replay-btn">Replay Quiz</button>
+      </section>
+    </main>
+    <script src="./Assets/questions.js"></script>
+    <script src="./Assets/script.js"></script>
+  </body>
+</html>

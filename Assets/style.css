@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  text-align: center;
+  margin: 10px;
+}
+
+h2 {
+  font-weight: 900;
+  text-align: center;
+  margin: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px;
+}
+.start-card,
+.q-card,
+.results-card,
+.end-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  border-width: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: black;
+  margin: 50px auto;
+  padding: 20px 40px;
+  max-width: 800px;
+  height: 500px;
+  width: 500px;
+}
+.question-count {
+  text-align: center;
+  font-size: 15px;
+  margin: 0;
+}
+.questions-text {
+  text-align: center;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.answer-text {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px;
+}
+
+#answer1,
+#answer2,
+#answer3,
+#answer4 {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: rgb(243, 237, 237);
+  border-radius: 25px;
+  padding: 8px 15px;
+  font-size: 17px;
+  margin: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#answer1:hover,
+#answer2:hover,
+#answer3:hover,
+#answer4:hover {
+  color: white;
+  background: rgb(134, 134, 134);
+  transform: scale(1.1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  border-width: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: black;
+  margin: 50px auto;
+  padding: 20px 40px;
+  max-width: 800px;
+  height: 500px;
+  width: 500px;
+}
+
+.start-btn,
+.sub-btn,
+.replay-btn {
+  height: 40px;
+  width: 40%;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 50px auto;
+  color: white;
+  background-color: darkred;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+.start-btn:hover,
+.sub-btn:hover,
+.replay-btn:hover {
+  font-weight: bold;
+  color: white;
+  background-color: darkgreen;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.options-li {
+  list-style: none;
+  list-style-type: none;
+}
+
+.timer {
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+}
+.final-score {
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
