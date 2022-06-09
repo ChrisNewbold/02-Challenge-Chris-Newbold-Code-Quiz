@@ -21,7 +21,7 @@ answer4Button.addEventListener("click", answerSubmitted);
 startButton.addEventListener("click", startGame);
 
 // this variable holds the amount of time remaining
-var countDownTimer = 75;
+var countDownTimer = questions.length * 10;
 // this holds a reference to the interval allowing us to start and stop the timer
 let interval;
 // this variable holds the current question the player is up to 
@@ -55,10 +55,10 @@ function decrementTimer() {
   }
 }
 // if the answer is wrong it decrements the time by 10 seconds
-function wrongAnswer() {
-  countDownTimer = countDownTimer - 10;
-  questionTimer.textContent = countDownTimer;
-}
+// function wrongAnswer() {
+//   countDownTimer = countDownTimer - 10;
+//   questionTimer.textContent = countDownTimer;
+// }
 // this decrements the timer every 1 second
 function startTimer() {
   interval = setInterval(decrementTimer, 1000)
@@ -79,17 +79,16 @@ function answerSubmitted(event) {
   const currentQuestion = questions[questionNumber]
   // this determins if the user chose the wrong answer
   if (currentQuestion.answer != answer) {
-    wrongAnswer()
-
+    // wrongAnswer()
+    countDownTimer = countDownTimer - 10;
+    questionTimer.textContent = countDownTimer;
   }
   //if user is on the last question this will end the game or go to the next question
   if (questionNumber === questions.length - 1) {
     finishGame()
   } else {
     questionNumber++
-    setNextQuestion(questionNumber);
-    localStorage.setItem("inicials");
-    localStorage.getItem("inicials");
+    setNextQuestion(questionNumber)
   }
 }
 //this is called when the user "clicks" save on the result card
