@@ -17,6 +17,10 @@ THEN I can save my initials and my score
 
 ```
 
+## Game Link
+
+https://chrisnewbold.github.io/02-Challenge-Chris-Newbold-Code-Quiz/
+
 ## GitHub Link
 
 https://github.com/ChrisNewbold/02-Challenge-Chris-Newbold-Code-Quiz
