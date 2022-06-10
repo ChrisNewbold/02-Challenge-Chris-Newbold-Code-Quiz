@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- site title with a brief description of what the site is about -->
     <title>Code Quiz created by Chris Newbold</title>
-    <!-- document links -->
+    <!-- document links to CSS file -->
     <link rel="stylesheet" href="./Assets/style.css" />
   </head>
 
-  <!-- Quiz -->
+  <!-- Quiz Start Card -->
   <body>
     <main>
       <section class="start-card">
@@ -22,20 +22,22 @@
           </p>
           <button class="start-btn">Start Quiz</button>
       </section>
+      <!-- Quiz Question Cards -->
       <section class="q-card hide">
         <!-- add the timer from JavaScript -->
         <div class="timer">50</div>
+        <!-- Here I've inserted question from JavaScript -->
         <div class="que-text">
-          <!-- Here I've inserted question from JavaScript -->
         </div>
         <div class="option-list">
-          <!-- Here I've inserted options from JavaScript -->
+          <!-- Here I've inserted answer options from JavaScript -->
           <button id="answer1" value="0"></button>
           <button id="answer2" value="1"></button>
           <button id="answer3" value="2"></button>
           <button id="answer4" value="3"></button>
         </div>
       </section>
+      <!-- Results Card -->
       <form class="results-card hide">
         <p>Congratulations you have completed the Quiz!</p>
         <p class="final-score">your score is <span id="result"></span></p>
@@ -49,6 +51,7 @@
         <button class="sub-btn">Save</button>
       </div>
       </form>
+      <!-- final rankings and saved score. Ability to restart game -->
       <section class="end-card hide">
         <h2>Want to try again?</h2>
         <p>Here are the current rankings!</p>
@@ -57,6 +60,7 @@
         <button class="replay-btn">Replay Quiz</button>
       </section>
     </main>
+    <!-- JavaScript Links -->
     <script src="./Assets/questions.js"></script>
     <script src="./Assets/script.js"></script>
   </body>
