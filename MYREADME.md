@@ -1,18 +1,11 @@
 # 03 JavaScript: Chris Newbold Password Generator
 
-## By the end of class we learnt
+## By the end of class I learnt the below topics
 
 • Define and use JavaScript objects.
 • Use JavaScript object methods.
 • Explain and use the this keyword.
-
-## User Story
-
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+• JQuery
 
 ## Acceptance Criteria
 
@@ -37,15 +30,3 @@ THEN the password is either displayed in an alert or written to the page
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
-
-![The Password Generator application displays a red button to "Generate Password".](./Assets/Images/Chris%20Newbold%20screen%20shot%20of%20final%20Password%20Generator.png)
-
-## Review
-
-You are required to submit the following for review:
-
-- The URL of the deployed application: https://chrisnewbold.github.io/02-Challenge-Chris-Newbold-JavaScript/
-
-- The URL of the GitHub repository: https://github.com/ChrisNewbold/02-Challenge-Chris-Newbold-JavaScript
-
-Reference for ASCII: https://www.petefreitag.com/cheatsheets/ascii-codes/

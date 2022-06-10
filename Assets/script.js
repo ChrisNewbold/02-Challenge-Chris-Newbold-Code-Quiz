@@ -2,8 +2,9 @@
 // selecting by .class
 const startCard = document.querySelector(".start-card");
 const startButton = document.querySelector(".start-btn");
-const resultsCard = document.querySelector('.results-card')
-const endCard = document.querySelector('.end-card')
+const replayButton = document.querySelector(".replay-btn");
+const resultsCard = document.querySelector('.results-card');
+const endCard = document.querySelector('.end-card');
 const questionCard = document.querySelector(".q-card");
 const questionText = document.querySelector(".que-text");
 const questionTimer = document.querySelector(".timer");
@@ -19,6 +20,7 @@ answer2Button.addEventListener("click", answerSubmitted);
 answer3Button.addEventListener("click", answerSubmitted);
 answer4Button.addEventListener("click", answerSubmitted);
 startButton.addEventListener("click", startGame);
+replayButton.addEventListener("click", restartGame);
 
 // this variable holds the amount of time remaining
 var countDownTimer = 50;
@@ -31,18 +33,18 @@ let questionNumber = 0;
 function startGame() {
     questionNumber = 0;
     //this hides the start card and reveals the question card 
-    startCard.classList.add('hide')
-    questionCard.classList.remove('hide')
-    setNextQuestion(questionNumber)
+    startCard.classList.add('hide');
+    questionCard.classList.remove('hide');
+    setNextQuestion(questionNumber);
     startTimer()
 }
 // this calls when the game is finished or when the timer ends
 function finishGame() {
     //stops the count down timer
-    clearInterval(interval)
+    clearInterval(interval);
     //this hides the result card and reveals the end card******
-    questionCard.classList.add('hide')
-    resultsCard.classList.remove('hide')
+    questionCard.classList.add('hide');
+    resultsCard.classList.remove('hide');
     endResult.textContent = countDownTimer
 }
 //this decrements the timer
@@ -100,17 +102,9 @@ resultsCard.addEventListener("submit", function (e) {
     localStorage.setItem(initials, result);
     console.log(result);
 
+    // end card local storage results front facing
     const endResult = document.getElementById("rankings");
     const inicials = document.getElementById('input');
-    // endResult.textContent = onclick = function () {
-    //     const key = result.value;
-    //     const value = input.value;
-
-    //     if (key && value) {
-    //         localStorage.setItem(key, value);
-    //         location.reload();
-    //     }
-    // };
     endCard.classList.remove('hide');
     resultsCard.classList.add('hide');
     console.log(localStorage)
@@ -120,6 +114,11 @@ resultsCard.addEventListener("submit", function (e) {
 
         endResult.innerHTML += `${key}: ${value}<br />`;
     }
-
-
+    // restart game function reseting the timer to 0 for replay
 });
+function restartGame() {
+    countDownTimer = 50;
+    questionTimer.textContent = countDownTimer
+    endCard.classList.add('hide');
+    startCard.classList.remove('hide');
+}
