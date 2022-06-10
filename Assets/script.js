@@ -100,22 +100,25 @@ resultsCard.addEventListener("submit", function (e) {
     localStorage.setItem(initials, result);
     console.log(result);
 
-    const endResult = document.getElementById("result");
+    const endResult = document.getElementById("rankings");
     const inicials = document.getElementById('input');
-    endResult.onclick = function () {
-        const key = inpKey.value;
-        const value = inpValue.value;
+    // endResult.textContent = onclick = function () {
+    //     const key = result.value;
+    //     const value = input.value;
 
-        if (key && value) {
-            localStorage.setItem(key, value);
-            location.reload();
-        }
-    };
+    //     if (key && value) {
+    //         localStorage.setItem(key, value);
+    //         location.reload();
+    //     }
+    // };
+    endCard.classList.remove('hide');
+    resultsCard.classList.add('hide');
+    console.log(localStorage)
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         const value = localStorage.getItem(key);
 
-        isOutput.innerHTML += '${key}: ${value}<br />';
+        endResult.innerHTML += `${key}: ${value}<br />`;
     }
 
 

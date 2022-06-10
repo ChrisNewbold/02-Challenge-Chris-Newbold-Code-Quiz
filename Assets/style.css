@@ -50,7 +50,12 @@ p {
   font-size: 15px;
   margin: 0;
 }
-
+.que-text {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
 .option-list {
   display: flex;
   flex-wrap: wrap;
