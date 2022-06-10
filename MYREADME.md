@@ -1,32 +1,33 @@
-# 03 JavaScript: Chris Newbold Password Generator
-
-## By the end of class I learnt the below topics
-
-• Define and use JavaScript objects.
-• Use JavaScript object methods.
-• Explain and use the this keyword.
-• JQuery
+# 02-Challenge-Chris-Newbold-Code-Quiz
 
 ## Acceptance Criteria
 
 ```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and my score
+
 ```
+
+## GitHub Link
+
+https://github.com/ChrisNewbold/02-Challenge-Chris-Newbold-Code-Quiz
 
 ## Mock-Up
 
-The following image shows the web application's appearance and functionality:
+The following images shows the web application's appearance and functionality:
+![](https://raw.githubusercontent.com/ChrisNewbold/02-Challenge-Chris-Newbold-Code-Quiz/main/Assets/Images/Inicials%20entry.png)
+
+![](https://raw.githubusercontent.com/ChrisNewbold/02-Challenge-Chris-Newbold-Code-Quiz/main/Assets/Images/Questions.png)
+
+![](https://raw.githubusercontent.com/ChrisNewbold/02-Challenge-Chris-Newbold-Code-Quiz/main/Assets/Images/Rules%20of%20play.png)
+
+![](https://raw.githubusercontent.com/ChrisNewbold/02-Challenge-Chris-Newbold-Code-Quiz/main/Assets/Images/Score%20Board.png)
